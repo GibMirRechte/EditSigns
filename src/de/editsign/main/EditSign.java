@@ -96,6 +96,7 @@ public class EditSign implements CommandExecutor {
 			sign.update();
 			break;
 			default:
+				p.sendMessage("§cPlease use a number between 1 and 4.");
 				break;
 		}
 		
