@@ -1,0 +1,7 @@
+name: EditSign
+version: 1.0
+author: GibMirRechte
+main: de.editsign.main.Main
+commands:
+   editsign:
+      description: Edit the line from a sign you looking at
