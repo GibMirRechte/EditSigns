@@ -13,7 +13,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.util.BlockIterator;
 
 public class EditSign implements CommandExecutor {
-	
+
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String cmdlabel, String args[]) {
 		
@@ -82,25 +82,27 @@ public class EditSign implements CommandExecutor {
 		case "1":
 			sign.setLine(0, msg.replace("&", "§"));
 			sign.update();
+			p.sendMessage("§aThe line was changed.");
 			break;
 		case "2":
 			sign.setLine(1, msg.replace("&", "§"));
 			sign.update();
+			p.sendMessage("§aThe line was changed.");
 			break;
 		case "3":
 			sign.setLine(2, msg.replace("&", "§"));
 			sign.update();
+			p.sendMessage("§aThe line was changed.");
 			break;
 		case "4":
 			sign.setLine(3, msg.replace("&", "§"));
 			sign.update();
+			p.sendMessage("§aThe line was changed.");
 			break;
 			default:
 				p.sendMessage("§cPlease use a number between 1 and 4.");
 				break;
 		}
-		
-		p.sendMessage("§aThe line was changed.");
 		return false;
 	}
 
