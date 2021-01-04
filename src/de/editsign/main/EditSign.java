@@ -82,22 +82,22 @@ public class EditSign implements CommandExecutor {
 		case "1":
 			sign.setLine(0, msg.replace("&", "§"));
 			sign.update();
-			p.sendMessage("§aThe line was changed.");
+			p.sendMessage("§aLine §c1 §awas changed.");
 			break;
 		case "2":
 			sign.setLine(1, msg.replace("&", "§"));
 			sign.update();
-			p.sendMessage("§aThe line was changed.");
+			p.sendMessage("§aLine §c2 §awas changed.");
 			break;
 		case "3":
 			sign.setLine(2, msg.replace("&", "§"));
 			sign.update();
-			p.sendMessage("§aThe line was changed.");
+			p.sendMessage("§aLine §c3 §awas changed.");
 			break;
 		case "4":
 			sign.setLine(3, msg.replace("&", "§"));
 			sign.update();
-			p.sendMessage("§aThe line was changed.");
+			p.sendMessage("§aLine §c4 §awas changed.");
 			break;
 			default:
 				p.sendMessage("§cPlease use a number between 1 and 4.");
