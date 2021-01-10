@@ -18,19 +18,19 @@ public class EditSign implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command cmd, String cmdlabel, String args[]) {
 		
 		if(!(sender instanceof Player)) {
-			sender.sendMessage("§cYou must be a player to use this command!");
+			sender.sendMessage("§7[§cEditSign§7] §cYou must be a player to use this command!");
 			return true;
 		}
 		
 		Player p = (Player) sender;
 		
 		if(!p.hasPermission("editsign.use")) {
-			sender.sendMessage("§cYou don't have the permissions to use this command!");
+			sender.sendMessage("§7[§cEditSign§7] §cYou don't have the permissions to use this command!");
 			return true;
 		}
 		
 		if(args.length < 2) {
-			p.sendMessage("§cPlease use /editsign <Line> <Message>");
+			p.sendMessage("§7[§cEditSign§7] §cPlease use /editsign <Line> <Message>");
 			return true;
 		}
 
@@ -68,7 +68,7 @@ public class EditSign implements CommandExecutor {
 	    Location loc = lastBlock.getLocation();
 		
 		if(!signs.contains(p.getWorld().getBlockAt(loc).getType())) {
-			p.sendMessage("§cYou must look at a sign!");
+			p.sendMessage("§7[§cEditSign§7] §cYou must look at a sign!");
 			return true;
 		}
 		
@@ -82,25 +82,25 @@ public class EditSign implements CommandExecutor {
 		case "1":
 			sign.setLine(0, msg.replace("&", "§"));
 			sign.update();
-			p.sendMessage("§aLine §c1 §awas changed.");
+			p.sendMessage("§7[§cEditSign§7] §aLine §c1 §awas changed.");
 			break;
 		case "2":
 			sign.setLine(1, msg.replace("&", "§"));
 			sign.update();
-			p.sendMessage("§aLine §c2 §awas changed.");
+			p.sendMessage("§7[§cEditSign§7] §aLine §c2 §awas changed.");
 			break;
 		case "3":
 			sign.setLine(2, msg.replace("&", "§"));
 			sign.update();
-			p.sendMessage("§aLine §c3 §awas changed.");
+			p.sendMessage("§7[§cEditSign§7] §aLine §c3 §awas changed.");
 			break;
 		case "4":
 			sign.setLine(3, msg.replace("&", "§"));
 			sign.update();
-			p.sendMessage("§aLine §c4 §awas changed.");
+			p.sendMessage("§7[§cEditSign§7] §aLine §c4 §awas changed.");
 			break;
 			default:
-				p.sendMessage("§cPlease use a number between 1 and 4.");
+				p.sendMessage("§7[§cEditSign§7] §cPlease use a number between 1 and 4.");
 				break;
 		}
 		return false;
