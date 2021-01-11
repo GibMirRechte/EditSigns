@@ -38,7 +38,7 @@ public class JoinListener implements Listener {
 	    private boolean checkUpdate() {
 	        System.out.println("§7[§cEditSign§7] §aChecking for updates...");
 	        try {
-	            String localVersion = Bukkit.getPluginManager().getPlugin("EntitySpawnManager").getDescription().getVersion();
+	            String localVersion = Bukkit.getPluginManager().getPlugin("EditSign").getDescription().getVersion();
 	            HttpsURLConnection connection = (HttpsURLConnection) new URL(url + id).openConnection();
 	            connection.setRequestMethod("GET");
 	            String raw = new BufferedReader(new InputStreamReader(connection.getInputStream())).readLine();
